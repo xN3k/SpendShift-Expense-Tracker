@@ -43,7 +43,8 @@ class _NewExpense extends State<NewExpense> {
         _selectedDate == null) {
       showDialog(
         context: context,
-        builder: (ctx) => AlertDialog(
+        builder: (ctx) => AlertDialog.adaptive(
+          // AlertDialog(
           title: const Text('Invalid Input'),
           content: const Text(
               'Please make sure a valid title, amount, date and category was Entered'),
