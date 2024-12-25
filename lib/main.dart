@@ -12,7 +12,18 @@ var kDarkColorScheme = ColorScheme.fromSeed(
 
 void main() {
   runApp(
-    MaterialApp(
+    const MyApp(),
+  );
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       darkTheme: ThemeData.dark().copyWith(
         colorScheme: kDarkColorScheme,
         cardTheme: const CardTheme().copyWith(
@@ -56,6 +67,6 @@ void main() {
             ),
       ),
       home: const Expenses(),
-    ),
-  );
+    );
+  }
 }
